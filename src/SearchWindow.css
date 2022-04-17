@@ -6,6 +6,7 @@
 }
     
 input{
+    width: 335px;
     margin-left: 10px;
     padding: 8px;
     color: #c06014;
@@ -37,24 +38,4 @@ justify-content: space-between;
 
 .header > h1 {
     font-size: 25px ;
-}
-.myButton {
-	background-color:#d0451b;
-	border-radius:28px;
-	border:1px solid #942911;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 20px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #854629;
-}
-.myButton:hover {
-	background-color:#bc3315;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
 }

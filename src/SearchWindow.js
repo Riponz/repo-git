@@ -16,7 +16,7 @@ function handleSubmit(e) {
 }
 
 function searchRepos() {
-  fetch(`https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&page=1&per_page=100`)
+  fetch(`https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc`)
   .then(res => res.json())
   .then(data => { setposts(data.items);
 })
@@ -35,8 +35,10 @@ function searchRepos() {
       <div className='header'>
         <h1>GitRep</h1>
         <form className='search'>
-      <div className='input'><input type="text" value={query} name="" placeholder='Enter language' onChange={e => setquery(e.target.value) } /></div>
-      <button type="submit" className='btn' onClick={handleSubmit}>search</button>
+      <div className='input'>
+        <input type="text" value={query} name="" placeholder='Enter language' onChange={e => setquery(e.target.value) } />
+        </div>
+      <button type="submit" className='btn' onSubmit={handleSubmit}>search</button>
       </form>
       </div>
 
